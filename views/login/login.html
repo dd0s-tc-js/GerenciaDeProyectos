@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MangoBank - Tu banco de confianza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #F7F7F7;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .navbar-toggler-icon {
+            color: #333;
+        }
+
+        .jumbotron {
+            background-color: #F8F8F8;
+        }
+
+        .btn-primary {
+            background-color: #FFA500;
+            border-color: #FFA500;
+        }
+
+        .btn-primary:hover {
+            background-color: #FF8C00;
+            border-color: #FF8C00;
+        }
+
+        .card {
+            border-radius: 1.2rem;
+            border-color: #E6E6E6;
+        }
+
+        .card-header {
+            background-color: #F7F7F7;
+            border-radius: 1.2rem 1.2rem 0 0;
+            border-color: #E6E6E6;
+        }
+
+        .card-body {
+            border-radius: 0 0 1.2rem 1.2rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 2rem;
+        }
+
+        .footer-link {
+            color: #FFF;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .footer-link:hover {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        .fa {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">MangoBank</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">MangoBank</h1>
+                <p class="lead">Tu banco de confianza</p>
+                <hr class="my-4">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Crea tu cuenta</a>
+            </div>
+        </div>
+    
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title"><i class="fa fa-credit-card"></i> Tarjeta de crédito</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Obtén una tarjeta de crédito con MangoBank y disfruta de beneficios exclusivos.</p>
+                            <a href="#" class="btn btn-primary">Solicitar tarjeta</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title"><i class="fa fa-money"></i> Cuentas de ahorro</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Ahorra con MangoBank y obtén intereses atractivos en tus cuentas de ahorro.</p>
+                            <a href="#" class="btn btn-primary">Abrir cuenta</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title"><i class="fa fa-briefcase"></i> Préstamos</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Obtén financiamiento con MangoBank y haz realidad tus proyectos personales o de negocio.</p>
+                            <a href="#" class="btn btn-primary">Solicitar préstamo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>© MangoBank 2023</p>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Iniciar sesión en MangoBank</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="/login" method="POST">
+                  <div class="form-group">
+                    <label for="document-type">Tipo de documento</label>
+                    <select class="form-control" id="document-type">
+                      <option>Cédula de ciudadanía</option>
+                      <option>Cédula de extranjería</option>
+                      <option>Pasaporte</option>
+                      <option>Tarjeta de identidad</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="document-number">Número de documento</label>
+                    <input type="text" class="form-control" name="docNumber" id="docNumber" placeholder="Ingresa tu número de documento">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" name="pass" id="password" placeholder="Ingresa tu contraseña">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                  </div>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+
+
+
+  <!-- <form action="/login" method="POST" class="w-auto m-auto login">
+    <h2 class="m-auto text-center">Login</h2>
+    <div class="form-group">
+      <input type="number" class="form-control rounded-pill" name="docNumber" id="docNumber" aria-describedby="Document Number"
+        placeholder="Enter Document Number">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control rounded-pill" name="pass" id="password" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-block btn-orange rounded-pill">Sign up</button>
+  </form> -->
